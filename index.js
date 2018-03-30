@@ -78,15 +78,15 @@ MiPM2_5.prototype = {
                     
                     pm2_5Characteristic.updateValue(result[0]);
                     
-                    if(result[0] <= 50) {
+                    if(result[0] <= 5) {
                         callback(null, Characteristic.AirQuality.EXCELLENT);
-                    } else if(result[0] > 50 && result[0] <= 100) {
+                    } else if(result[0] > 5 && result[0] <= 15) {
                         callback(null, Characteristic.AirQuality.GOOD);
-                    } else if(result[0] > 100 && result[0] <= 200) {
+                    } else if(result[0] > 15 && result[0] <= 35) {
                         callback(null, Characteristic.AirQuality.FAIR);
-                    } else if(result[0] > 200 && result[0] <= 300) {
+                    } else if(result[0] > 35 && result[0] <= 75) {
                         callback(null, Characteristic.AirQuality.INFERIOR);
-                    } else if(result[0] > 300) {
+                    } else if(result[0] > 75) {
                         callback(null, Characteristic.AirQuality.POOR);
                     } else {
                         callback(null, Characteristic.AirQuality.UNKNOWN);
