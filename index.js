@@ -84,9 +84,9 @@ MiPM2_5.prototype = {
                         callback(null, Characteristic.AirQuality.GOOD);
                     } else if(result[0] > 15 && result[0] <= 35) {
                         callback(null, Characteristic.AirQuality.FAIR);
-                    } else if(result[0] > 35 && result[0] <= 75) {
+                    } else if(result[0] > 35 && result[0] <= 55) {
                         callback(null, Characteristic.AirQuality.INFERIOR);
-                    } else if(result[0] > 75) {
+                    } else if(result[0] > 55) {
                         callback(null, Characteristic.AirQuality.POOR);
                     } else {
                         callback(null, Characteristic.AirQuality.UNKNOWN);
